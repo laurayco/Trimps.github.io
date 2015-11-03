@@ -333,7 +333,6 @@ function load(saveString, autoLoad) {
 	
 	if (game.global.challengeActive && typeof game.challenges[game.global.challengeActive].onLoad !== 'undefined') game.challenges[game.global.challengeActive].onLoad();
 	if (game.global.challengeActive != "Scientist") document.getElementById("scienceCollectBtn").style.display = "block";
-	if (game.global.brokenPlanet) document.getElementById("wrapper").style.background = "url(css/bg2_vert.png) center repeat-y";
 	
 	game.options.displayed = false;
 	displaySettings();
@@ -2776,7 +2775,6 @@ function autoTrap() {
 function planetBreaker(){
 	game.stats.planetsBroken.value++;
 	game.global.brokenPlanet = true;
-	document.getElementById("wrapper").style.background = "url(css/bg2_vert.png) center repeat-y";
 	document.getElementById("extraGridInfoTitle").innerHTML = "The Improbability";
 	document.getElementById("extraGridInfoSummary").innerHTML = "That shouldn't have happened. There should have been a Blimp there. Something is growing unstable.";
 	document.getElementById("extraGridInfoSub").innerHTML = "Trimp breed speed reduced by a factor of 10. 20% of enemy damage can now penetrate your block. You have unlocked a new upgrade to learn a Formation. Helium harvested per zone is increased by a factor of 5. Equipment cost is dramatically cheaper. You have access to the 'Trimp' challenge!";
